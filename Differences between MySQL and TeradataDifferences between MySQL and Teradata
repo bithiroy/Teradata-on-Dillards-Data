@@ -1,0 +1,9 @@
+In Teradata,
+-	HELP (i/o SHOW/DESCRIBE in MySQL) to get a list of columns in a table and information about a single column in a table.
+-	SHOW does something different in Teradata.
+-	TOP comes immediately after SELECT (i/o LIMIT at the end in MySQL).
+-	SAMPLE only in Teradata (not in MySQL).
+-	DISTINCT and TOP cannot be used together (while DISTINCT and LIMIT can be used in the same query in MySQL).
+-	Teradata accepts only single quotation mark (MySQL accepts both double and single quotation marks).
+-	To indicate “does not equal”, Teradata only accepts “<>” (MySQL accepts the symbols “!=” and “<>”).
+-	date in the format of “YYYY-MM-DD”
