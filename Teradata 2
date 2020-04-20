@@ -13,7 +13,9 @@ Example 1:
     FROM  company
 	        LEFT JOIN foods
 	        ON company.company_id = foods.company_id;
-This SQL statement would return all rows from the company table and only those rows from the foods table where the joined fields are equal and if the ON clause matches no records in the 'foods' table, the join will still return rows, but the NULL in each column of the right table. 
+This SQL statement would return all rows from the company table and only those rows from the foods table 
+where the joined fields are equal and if the ON clause matches no records in the 'foods' table, the join will still return rows, 
+but the NULL in each column of the right table. 
 
 Example 2:
     SELECT a.bill_no, b.item_name, a.bill_amt 
@@ -22,7 +24,9 @@ Example 2:
 	       ON a.item_id=b.item_id 
     WHERE  a.bill_amt>500;
 
-This SQL statement will first join all rows from the counter_sale table and only those rows from the foods table where the joined fields are equal and if the ON clause matches no records in the foods table, the join will still return rows, but the NULL in each column of right table, therefore eliminates those rows which bill amount is less than or equal to 500.
+This SQL statement will first join all rows from the counter_sale table and only those rows from the foods table 
+where the joined fields are equal and if the ON clause matches no records in the foods table, the join will still return rows, 
+but the NULL in each column of right table, therefore eliminates those rows which bill amount is less than or equal to 500.
 
 
 2. Left Join using multiple tables:
@@ -35,9 +39,17 @@ This SQL statement will first join all rows from the counter_sale table and only
     WHERE c.company_name IS NOT NULL
     ORDER BY a.bill_no;
 
-This SQL statement will first join all rows from the counter_sale table and only those rows from the foods table where the joined fields are matching and if the ON clause matches no records in the foods table, the join will still return rows, but the NULL in each column of the right table. Therefore this result will join with company table and all rows from result table and matched and unmatched rows from company table will also come, but for the unmatched rows of company table, the column value will be NULL. Therefore the WHERE clause will eliminate those rows which company name column value is NULL and after that, the ORDER BY clause will arrange the rows in ascending order according to the bill number. 
+This SQL statement will first join all rows from the counter_sale table and only those rows from the foods table 
+where the joined fields are matching and if the ON clause matches no records in the foods table, the join will still return rows, 
+but the NULL in each column of the right table. Therefore this result will join with company table 
+and all rows from result table and matched and unmatched rows from company table will also come, 
+but for the unmatched rows of company table, the column value will be NULL. 
+Therefore the WHERE clause will eliminate those rows which company name column value is NULL and after that, 
+the ORDER BY clause will arrange the rows in ascending order according to the bill number. 
 
--	There is actually no difference between a left join and a left outer join – both of them refer to the similar operation in SQL.
+- There is actually no difference between a left join and a left outer join 
+– both of them refer to the similar operation in SQL.
+
     SELECT company.company_id,company.company_name,
 	      foods.item_id, foods.item_name, foods.company_id 
     FROM company 
@@ -50,4 +62,5 @@ This SQL statement will first join all rows from the counter_sale table and only
         LEFT OUTER JOIN foods 
         ON company.company_id = foods.company_id;
 
-Running the SQL with the "outer" keyword, would give us the exact same results as running the SQL without the “outer”. Here the SQL statement with "outer" with "left join".
+Running the SQL with the "outer" keyword, would give us the exact same results as running the SQL without the “outer”. 
+Here the SQL statement with "outer" with "left join".
