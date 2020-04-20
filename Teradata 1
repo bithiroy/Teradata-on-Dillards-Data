@@ -64,3 +64,12 @@ To retrieve a random 10% of the rows from the strinfo table:
   FROM strinfo
   SAMPLE .10
 
+
+GROUP BY:
+-	Any non-aggregate column in the SELECT list or HAVING list of a query with a GROUP BY clause must also listed in the GROUP BY clause.
+
+  SELECT sku, retail, cost, COUNT(sku)
+  FROM skstinfo
+  GROUP BY sku, retail, cost
+
+Error: “Selected non-aggregate values must be part of the associated group”
