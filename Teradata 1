@@ -45,9 +45,9 @@ To select the first 10 rows of the strinfo table, ordered in ascending alphabeti
   ORDER BY city ASC
 
 To select the first 10 rows of the strinfo table, ordered in descending alphabetical order by the city name (you would retrieve names that start with “w” and “y”):
-SELECT TOP 10 *
-FROM strinfo
-ORDER BY city DESC
+  SELECT TOP 10 *
+  FROM strinfo
+  ORDER BY city DESC
 
 
 SAMPLE to get random data:
