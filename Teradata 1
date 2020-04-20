@@ -1,0 +1,67 @@
+Teradata Viewpoint and SQL Scratchpad:(HELP, SHOW, TOP, ASC/DESC, SAMPLE)
+
+
+
+HELP:
+To get a list of columns in a table and information about a single column in a table:
+
+  HELP TABLE tablename
+  HELP COLUMN columnname
+
+“Y” if null values are permitted in that column
+“N” if null values are not permitted
+
+HELP does not show whether a column is a primary or foreign key
+
+
+
+SHOW to get primary or foreign key:
+  SHOW table tablename
+  
+-	SHOW does something different in Teradata than it does in MySQL. 
+-	Teradata uses SHOW to give you the actual code that was written to create the table. 
+-	You can ignore much of the SHOW output for our purposes, but the end of the create table statement tells you what defaults were set for each column in the table.
+
+Output Example:
+STORE INTEGER NOT NULL,
+CITY CHAR(20) CHARACTER SET LATIN NOT CASESPECIFIC,
+STATE CHAR(2) CHARACTER SET LATIN NOT CASESPECIFIC,
+ZIP CHAR(5) CHARACTER SET LATIN NOT CASESPECIFIC,
+PRIMARY KEY ( STORE ))
+
+-	The STORE column was configured so that it would not accept null values, 
+-	the CITY, STATE, and ZIP columns were configured so their values would not be case-specific, 
+-	The column STORE was defined as the primary key of the table.
+
+
+TOP (i/o LIMIT):
+TOP comes immediately after SELECT.
+To select the first 10 rows of the strinfo table:
+  SELECT TOP 10 *
+  FROM strinfo
+  ASC/DESC:
+
+To select the first 10 rows of the strinfo table, ordered in ascending alphabetical order by the city name (you would retrieve names that start with “a”):
+  SELECT TOP 10 *
+  FROM strinfo
+  ORDER BY city ASC
+
+To select the first 10 rows of the strinfo table, ordered in descending alphabetical order by the city name (you would retrieve names that start with “w” and “y”):
+SELECT TOP 10 *
+FROM strinfo
+ORDER BY city DESC
+
+SAMPLE to get random data:
+-	SAMPLE that allows to select a random sampling of the data in a table.
+-	Every time you run the queries, they will return a different selection of rows.
+
+To retrieve 10 random rows from the strinfo table:
+  SELECT *
+  FROM strinfo
+  SAMPLE 10
+
+To retrieve a random 10% of the rows from the strinfo table:
+  SELECT *
+  FROM strinfo
+  SAMPLE .10
+
