@@ -18,7 +18,8 @@ SHOW to get primary or foreign key:
   
 -	SHOW does something different in Teradata than it does in MySQL. 
 -	Teradata uses SHOW to give you the actual code that was written to create the table. 
--	You can ignore much of the SHOW output for our purposes, but the end of the create table statement tells you what defaults were set for each column in the table.
+-	You can ignore much of the SHOW output for our purposes, but the end of the create table statement tells you 
+  what defaults were set for each column in the table.
 
 Output Example:
 STORE INTEGER NOT NULL,
@@ -39,12 +40,14 @@ To select the first 10 rows of the strinfo table:
   FROM strinfo
   ASC/DESC:
 
-To select the first 10 rows of the strinfo table, ordered in ascending alphabetical order by the city name (you would retrieve names that start with “a”):
+To select the first 10 rows of the strinfo table, ordered in ascending alphabetical order by the city name 
+(you would retrieve names that start with “a”):
   SELECT TOP 10 *
   FROM strinfo
   ORDER BY city ASC
 
-To select the first 10 rows of the strinfo table, ordered in descending alphabetical order by the city name (you would retrieve names that start with “w” and “y”):
+To select the first 10 rows of the strinfo table, ordered in descending alphabetical order by the city name 
+(you would retrieve names that start with “w” and “y”):
   SELECT TOP 10 *
   FROM strinfo
   ORDER BY city DESC
@@ -66,7 +69,8 @@ To retrieve a random 10% of the rows from the strinfo table:
 
 
 GROUP BY:
--	Any non-aggregate column in the SELECT list or HAVING list of a query with a GROUP BY clause must also listed in the GROUP BY clause.
+-	Any non-aggregate column in the SELECT list or HAVING list of a query with a GROUP BY clause must also 
+  listed in the GROUP BY clause.
 
   SELECT sku, retail, cost, COUNT(sku)
   FROM skstinfo
