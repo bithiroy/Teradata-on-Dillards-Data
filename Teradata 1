@@ -1,7 +1,6 @@
 Teradata Viewpoint and SQL Scratchpad:(HELP, SHOW, TOP, ASC/DESC, SAMPLE)
 
 
-
 HELP:
 To get a list of columns in a table and information about a single column in a table:
 
@@ -12,7 +11,6 @@ To get a list of columns in a table and information about a single column in a t
 “N” if null values are not permitted
 
 HELP does not show whether a column is a primary or foreign key
-
 
 
 SHOW to get primary or foreign key:
@@ -50,6 +48,7 @@ To select the first 10 rows of the strinfo table, ordered in descending alphabet
 SELECT TOP 10 *
 FROM strinfo
 ORDER BY city DESC
+
 
 SAMPLE to get random data:
 -	SAMPLE that allows to select a random sampling of the data in a table.
