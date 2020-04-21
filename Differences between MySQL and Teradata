@@ -7,3 +7,6 @@ In Teradata,
 -	Teradata accepts only single quotation mark (MySQL accepts both double and single quotation marks).
 -	To indicate “does not equal”, Teradata only accepts “<>” (MySQL accepts the symbols “!=” and “<>”).
 -	date in the format of “YYYY-MM-DD”
+- Teradata does not permit the use of IF statements, but it does permit the use of CASE statements. 
+  Subqueries are run in Teradata the same way they are run in MySQL.
+- Teradata provides the STDDEV_SAMP and STDDEV_SAMP functions (instead of the STDDEV function in MySQL).
