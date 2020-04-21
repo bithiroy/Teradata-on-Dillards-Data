@@ -1,12 +1,12 @@
 In Teradata,
--	HELP (i/o SHOW/DESCRIBE in MySQL) to get a list of columns in a table and information about a single column in a table.
--	SHOW does something different in Teradata.
--	TOP comes immediately after SELECT (i/o LIMIT at the end in MySQL).
--	SAMPLE only in Teradata (not in MySQL).
--	DISTINCT and TOP cannot be used together (while DISTINCT and LIMIT can be used in the same query in MySQL).
--	Teradata accepts only single quotation mark (MySQL accepts both double and single quotation marks).
--	To indicate “does not equal”, Teradata only accepts “<>” (MySQL accepts the symbols “!=” and “<>”).
--	date in the format of “YYYY-MM-DD”
--   Teradata does not permit the use of IF statements, but it does permit the use of CASE statements. 
-    Subqueries are run in Teradata the same way they are run in MySQL.
--   Teradata provides the STDDEV_SAMP and STDDEV_SAMP functions (instead of the STDDEV function in MySQL).
+- HELP (i/o SHOW/DESCRIBE in MySQL) to get a list of columns in a table and information about a single column in a table.
+- SHOW does something different in Teradata.
+- TOP comes immediately after SELECT (i/o LIMIT at the end in MySQL).
+- SAMPLE only in Teradata (not in MySQL).
+- DISTINCT and TOP cannot be used together (while DISTINCT and LIMIT can be used in the same query in MySQL).
+- Teradata accepts only single quotation mark (MySQL accepts both double and single quotation marks).
+- To indicate “does not equal”, Teradata only accepts “<>” (MySQL accepts the symbols “!=” and “<>”).
+- Date in the format of “YYYY-MM-DD”
+- Teradata does not permit the use of IF statements, but it does permit the use of CASE statements. 
+  Subqueries are run in Teradata the same way they are run in MySQL.
+- Teradata provides the STDDEV_SAMP and STDDEV_SAMP functions (instead of the STDDEV function in MySQL).
